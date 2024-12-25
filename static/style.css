@@ -1,0 +1,85 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+
+    /* Configuración para centrar con Flexbox */
+    display: flex;                /* Activa Flexbox */
+    justify-content: center;      /* Centra horizontalmente */
+    align-items: center;          /* Centra verticalmente */
+    height: 100vh;                /* Altura completa de la ventana */
+    margin: 0;                    /* Elimina márgenes predeterminados */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    color: #007bff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Formulario */
+form {
+    margin: 20px 0;
+}
+
+input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Resultado */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    color: #212529;
+    text-align: left;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    input[type="number"],
+    button {
+        width: 100%;
+    }
+}

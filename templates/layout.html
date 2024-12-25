@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Salary, Predicted!</h1>
+        <p>Enter your years of experience to predict your salary.</p>
+        
+        <form method="POST" >
+            <div>
+                <label for="experience">Years of Experience:</label><br>
+                <input type="number" id="experience" name="experience" step="0.1"  min="0" max="100" autocomplete="off" placeholder="Enter a Number" autofocus required>
+            </div>
+            <button type="submit">Predict Salary</button>
+        </form>
+
+        {% if prediction is not none %}
+        <div class="result">
+            <h2>Result:</h2>
+            <p>With {{ request.form['experience'] }} years of experience, the estimated salary is: ${{ prediction }} per year</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
